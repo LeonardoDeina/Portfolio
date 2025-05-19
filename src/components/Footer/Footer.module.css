@@ -1,0 +1,21 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+  background-color: var(--color-wood-dark);
+  color: var(--color-text-on-dark);
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 50px; /* Para dar um espaço do conteúdo principal */
+}
+
+.footerContent p {
+  margin: 5px 0;
+}
+
+.footerContent a {
+  color: var(--color-text-on-dark);
+  margin: 0 10px;
+}
+
+.footerContent a:hover {
+  color: var(--color-accent-modern);
+}
