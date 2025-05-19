@@ -1,0 +1,52 @@
+/* src/components/Button/Button.module.css */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.primary {
+  background-color: var(--color-accent-modern);
+  color: var(--color-text-on-dark);
+  border-color: var(--color-accent-modern);
+}
+
+.primary:hover {
+  background-color: #b86705; /* Tom mais escuro do accent */
+  border-color: #b86705;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--color-wood-dark);
+  border-color: var(--color-wood-medium);
+}
+
+.secondary:hover {
+  background-color: var(--color-wood-light);
+  color: var(--color-wood-dark);
+  border-color: var(--color-wood-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+.btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}

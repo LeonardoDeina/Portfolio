@@ -1,0 +1,122 @@
+/* src/components/Navbar/Navbar.module.css */
+.navbar {
+    background-color: var(--color-wood-dark);
+    color: var(--color-text-on-dark);
+    padding: 15px 0;
+    box-shadow: var(--shadow-medium);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navLogo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-on-dark);
+    text-decoration: none;
+  }
+  
+  /* .logoImage { height: 40px; vertical-align: middle; margin-right: 10px; } */
+  
+  .navMenu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItem {}
+  
+  .navLink {
+    color: var(--color-text-on-dark);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover,
+  .activeLink {
+    color: var(--color-accent-modern);
+  }
+  
+  .navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-accent-modern);
+    transition: width 0.3s ease;
+  }
+  
+  .navLink:hover::after,
+  .activeLink::after {
+    width: 100%;
+  }
+  
+  .ctaLink {
+    background-color: var(--color-accent-modern);
+    color: var(--color-text-on-dark) !important; /* Sobrescrever cor no hover */
+    padding: 8px 15px !important;
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .ctaLink:hover {
+    background-color: #b86705; /* Um tom mais escuro do accent */
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  .ctaLink::after { /* Remover sublinhado do ctaLink */
+      display: none;
+  }
+  
+  
+  .menuToggle {
+    display: none; /* Escondido em telas maiores */
+    background: none;
+    border: none;
+    color: var(--color-text-on-dark);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navMenu {
+      display: none; /* Escondido por padrão no mobile */
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Altura da navbar */
+      left: 0;
+      width: 100%;
+      background-color: var(--color-wood-dark);
+      padding: 20px 0;
+      box-shadow: var(--shadow-medium);
+    }
+  
+    .navMenu.active {
+      display: flex; /* Mostra quando ativo */
+    }
+  
+    .navItem {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .menuToggle {
+      display: block; /* Mostra o botão de toggle no mobile */
+    }
+  }

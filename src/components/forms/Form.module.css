@@ -1,0 +1,82 @@
+/* src/components/forms/Form.module.css */
+.form {
+  background-color: var(--color-background-content);
+  padding: 30px 40px;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-medium);
+  max-width: 600px;
+  margin: 40px auto;
+  border-top: 5px solid var(--color-accent-modern); /* Detalhe moderno */
+}
+
+.formTitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: var(--color-wood-dark);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--color-wood-medium);
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"], /* Para telefone no QuoteForm */
+.formGroup select, /* Para selects no QuoteForm */
+.formGroup textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-wood-light);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  box-sizing: border-box; /* Importante para o padding não estourar o width */
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-accent-modern);
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.2); /* Glow sutil no foco */
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.errorText {
+    display: block;
+    color: #c0392b; /* Vermelho para erros */
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+.successMessage {
+  background-color: #e8f5e9; /* Verde claro */
+  color: #2e7d32; /* Verde escuro */
+  padding: 15px;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.errorMessage {
+  background-color: #ffebee; /* Vermelho claro */
+  color: #c62828; /* Vermelho escuro */
+  padding: 15px;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 20px;
+  text-align: center;
+}
